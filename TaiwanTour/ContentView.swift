@@ -68,7 +68,7 @@ struct ContentView_Previews: PreviewProvider {
 struct HomeView: View {
     var body: some View {
         VStack(alignment: .center) {
-            Text("Welcome to Worship Helper")
+            Text("Welcome to Taiwan Tour APP")
                 .customFont(.headline, size: 24) // 使用自定義字型
                 .foregroundColor(.black) // 設定文字顏色
         }
