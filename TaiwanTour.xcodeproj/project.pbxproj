@@ -16,7 +16,6 @@
 		99CBCFFC2C6F96D300FA192B /* TaiwanTourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBCFFB2C6F96D300FA192B /* TaiwanTourTests.swift */; };
 		99CBD0062C6F96D300FA192B /* TaiwanTourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0052C6F96D300FA192B /* TaiwanTourUITests.swift */; };
 		99CBD0082C6F96D300FA192B /* TaiwanTourUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0072C6F96D300FA192B /* TaiwanTourUITestsLaunchTests.swift */; };
-		99CBD0152C6F977200FA192B /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0142C6F977200FA192B /* BottomTabView.swift */; };
 		99CBD0372C6F981300FA192B /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 99CBD0362C6F981300FA192B /* RiveRuntime */; };
 		99CBD0542C6F98E100FA192B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0462C6F98E100FA192B /* CustomTextField.swift */; };
 		99CBD0572C6F98E100FA192B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0452C6F98E100FA192B /* Extensions.swift */; };
@@ -25,6 +24,7 @@
 		99CBD0652C6F99BC00FA192B /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0602C6F99BC00FA192B /* SideMenuOptionView.swift */; };
 		99CBD0662C6F99BC00FA192B /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0612C6F99BC00FA192B /* SideMenuView.swift */; };
 		99CBD0672C6F99BC00FA192B /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0622C6F99BC00FA192B /* SideMenuViewModel.swift */; };
+		99CBD06B2C6F9E6100FA192B /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD06A2C6F9E6100FA192B /* TabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,6 @@
 		99CBD0012C6F96D300FA192B /* TaiwanTourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaiwanTourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99CBD0052C6F96D300FA192B /* TaiwanTourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanTourUITests.swift; sourceTree = "<group>"; };
 		99CBD0072C6F96D300FA192B /* TaiwanTourUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanTourUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		99CBD0142C6F977200FA192B /* BottomTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomTabView.swift; path = ../../../.Trash/BottomTabView.swift; sourceTree = "<group>"; };
 		99CBD0452C6F98E100FA192B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		99CBD0462C6F98E100FA192B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		99CBD0472C6F98E100FA192B /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		99CBD0602C6F99BC00FA192B /* SideMenuOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
 		99CBD0612C6F99BC00FA192B /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		99CBD0622C6F99BC00FA192B /* SideMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		99CBD06A2C6F9E6100FA192B /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,12 +123,12 @@
 		99CBCFE42C6F96D200FA192B /* TaiwanTour */ = {
 			isa = PBXGroup;
 			children = (
+				99CBCFE52C6F96D200FA192B /* TaiwanTourApp.swift */,
+				99CBCFE72C6F96D200FA192B /* ContentView.swift */,
+				99CBD06A2C6F9E6100FA192B /* TabView.swift */,
 				99CBD0632C6F99BC00FA192B /* SideMenuView */,
 				99CBD04C2C6F98E100FA192B /* RiveAssets */,
 				99CBD0442C6F98E100FA192B /* Style */,
-				99CBD0142C6F977200FA192B /* BottomTabView.swift */,
-				99CBCFE52C6F96D200FA192B /* TaiwanTourApp.swift */,
-				99CBCFE72C6F96D200FA192B /* ContentView.swift */,
 				99CBCFE92C6F96D300FA192B /* Assets.xcassets */,
 				99CBCFEE2C6F96D300FA192B /* Persistence.swift */,
 				99CBCFF02C6F96D300FA192B /* TaiwanTour.xcdatamodeld */,
@@ -344,7 +344,7 @@
 				99CBCFE82C6F96D200FA192B /* ContentView.swift in Sources */,
 				99CBD0572C6F98E100FA192B /* Extensions.swift in Sources */,
 				99CBD0642C6F99BC00FA192B /* SideMenuHeaderView.swift in Sources */,
-				99CBD0152C6F977200FA192B /* BottomTabView.swift in Sources */,
+				99CBD06B2C6F9E6100FA192B /* TabView.swift in Sources */,
 				99CBCFE62C6F96D200FA192B /* TaiwanTourApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
