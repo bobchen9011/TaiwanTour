@@ -20,11 +20,11 @@
 		99CBD0542C6F98E100FA192B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0462C6F98E100FA192B /* CustomTextField.swift */; };
 		99CBD0572C6F98E100FA192B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0452C6F98E100FA192B /* Extensions.swift */; };
 		99CBD05A2C6F98E100FA192B /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0472C6F98E100FA192B /* CustomFont.swift */; };
-		99CBD0642C6F99BC00FA192B /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD05F2C6F99BC00FA192B /* SideMenuHeaderView.swift */; };
-		99CBD0652C6F99BC00FA192B /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0602C6F99BC00FA192B /* SideMenuOptionView.swift */; };
-		99CBD0662C6F99BC00FA192B /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0612C6F99BC00FA192B /* SideMenuView.swift */; };
-		99CBD0672C6F99BC00FA192B /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0622C6F99BC00FA192B /* SideMenuViewModel.swift */; };
 		99CBD06B2C6F9E6100FA192B /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD06A2C6F9E6100FA192B /* TabView.swift */; };
+		99CBD06E2C6FA20100FA192B /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD06D2C6FA20100FA192B /* SideMenuHeaderView.swift */; };
+		99CBD0702C6FA21C00FA192B /* SideMenuOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD06F2C6FA21C00FA192B /* SideMenuOptionView.swift */; };
+		99CBD0722C6FA23200FA192B /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0712C6FA23200FA192B /* SideMenuView.swift */; };
+		99CBD0742C6FA24A00FA192B /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBD0732C6FA24A00FA192B /* SideMenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,11 +67,11 @@
 		99CBD0512C6F98E100FA192B /* check.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = check.riv; sourceTree = "<group>"; };
 		99CBD0522C6F98E100FA192B /* icons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.riv; sourceTree = "<group>"; };
 		99CBD0532C6F98E100FA192B /* button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.riv; sourceTree = "<group>"; };
-		99CBD05F2C6F99BC00FA192B /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
-		99CBD0602C6F99BC00FA192B /* SideMenuOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
-		99CBD0612C6F99BC00FA192B /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
-		99CBD0622C6F99BC00FA192B /* SideMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 		99CBD06A2C6F9E6100FA192B /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		99CBD06D2C6FA20100FA192B /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
+		99CBD06F2C6FA21C00FA192B /* SideMenuOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuOptionView.swift; sourceTree = "<group>"; };
+		99CBD0712C6FA23200FA192B /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		99CBD0732C6FA24A00FA192B /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,12 +123,12 @@
 		99CBCFE42C6F96D200FA192B /* TaiwanTour */ = {
 			isa = PBXGroup;
 			children = (
+				99CBD0442C6F98E100FA192B /* Style */,
+				99CBD04C2C6F98E100FA192B /* RiveAssets */,
+				99CBD06C2C6FA1E300FA192B /* SideMenuView */,
 				99CBCFE52C6F96D200FA192B /* TaiwanTourApp.swift */,
 				99CBCFE72C6F96D200FA192B /* ContentView.swift */,
 				99CBD06A2C6F9E6100FA192B /* TabView.swift */,
-				99CBD0632C6F99BC00FA192B /* SideMenuView */,
-				99CBD04C2C6F98E100FA192B /* RiveAssets */,
-				99CBD0442C6F98E100FA192B /* Style */,
 				99CBCFE92C6F96D300FA192B /* Assets.xcassets */,
 				99CBCFEE2C6F96D300FA192B /* Persistence.swift */,
 				99CBCFF02C6F96D300FA192B /* TaiwanTour.xcdatamodeld */,
@@ -186,16 +186,15 @@
 			path = RiveAssets;
 			sourceTree = "<group>";
 		};
-		99CBD0632C6F99BC00FA192B /* SideMenuView */ = {
+		99CBD06C2C6FA1E300FA192B /* SideMenuView */ = {
 			isa = PBXGroup;
 			children = (
-				99CBD05F2C6F99BC00FA192B /* SideMenuHeaderView.swift */,
-				99CBD0602C6F99BC00FA192B /* SideMenuOptionView.swift */,
-				99CBD0612C6F99BC00FA192B /* SideMenuView.swift */,
-				99CBD0622C6F99BC00FA192B /* SideMenuViewModel.swift */,
+				99CBD06D2C6FA20100FA192B /* SideMenuHeaderView.swift */,
+				99CBD06F2C6FA21C00FA192B /* SideMenuOptionView.swift */,
+				99CBD0712C6FA23200FA192B /* SideMenuView.swift */,
+				99CBD0732C6FA24A00FA192B /* SideMenuViewModel.swift */,
 			);
-			name = SideMenuView;
-			path = ../../worshipHelper/worshipHelper/SideMenuView;
+			path = SideMenuView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,13 +336,13 @@
 				99CBD0542C6F98E100FA192B /* CustomTextField.swift in Sources */,
 				99CBD05A2C6F98E100FA192B /* CustomFont.swift in Sources */,
 				99CBCFEF2C6F96D300FA192B /* Persistence.swift in Sources */,
-				99CBD0652C6F99BC00FA192B /* SideMenuOptionView.swift in Sources */,
-				99CBD0672C6F99BC00FA192B /* SideMenuViewModel.swift in Sources */,
-				99CBD0662C6F99BC00FA192B /* SideMenuView.swift in Sources */,
+				99CBD0702C6FA21C00FA192B /* SideMenuOptionView.swift in Sources */,
+				99CBD0742C6FA24A00FA192B /* SideMenuViewModel.swift in Sources */,
+				99CBD0722C6FA23200FA192B /* SideMenuView.swift in Sources */,
 				99CBCFF22C6F96D300FA192B /* TaiwanTour.xcdatamodeld in Sources */,
 				99CBCFE82C6F96D200FA192B /* ContentView.swift in Sources */,
 				99CBD0572C6F98E100FA192B /* Extensions.swift in Sources */,
-				99CBD0642C6F99BC00FA192B /* SideMenuHeaderView.swift in Sources */,
+				99CBD06E2C6FA20100FA192B /* SideMenuHeaderView.swift in Sources */,
 				99CBD06B2C6F9E6100FA192B /* TabView.swift in Sources */,
 				99CBCFE62C6F96D200FA192B /* TaiwanTourApp.swift in Sources */,
 			);
