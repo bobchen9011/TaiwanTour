@@ -1,86 +1,93 @@
 //
 //  ContentView.swift
-//  TaiwanTour
+//  worshipHelper
 //
 //  Created by BBOB on 2024/8/16.
 //
 
 import SwiftUI
-import CoreData
+import RiveRuntime
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+    @State private var isShowing = false
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+            ZStack {
+                VStack {
+                    VStack {
+                        LinearGradient(
+                            gradient: Gradient(colors: [ Color(hex: "008080"), ]),
+                            startPoint: .top,
+                            endPoint: .bottom
+                        )
+                        .frame(height: 150)
+                        .ignoresSafeArea(edges: .top)
                     }
+                    
+                    Spacer()
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                
+                if isShowing {
+                    sideMenuView(isShowing: $isShowing)
                 }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                
+                BottomTabView()
+                    .cornerRadius(isShowing ? 20 : 10)
+                    .offset(x: isShowing ? 300 : 0, y: isShowing ? 44 : 0)
+                    .scaleEffect(isShowing ? 0.9 : 1)
+                    .navigationBarItems(
+                        leading: Button(action: {
+                            withAnimation(.spring()) {
+                                isShowing.toggle()
+                            }
+                        }) {
+                            Image(systemName: "list.bullet")
+                                .foregroundColor(.black)
+                        },
+                        trailing: Button(action: {
+                            // 不再切換暗黑模式
+                        }) {
+                            // 這裡可以加入按鈕內容
+                        }
+                    )
+                    .navigationTitle("首頁")
+                    .navigationBarTitleDisplayMode(.inline)
             }
         }
     }
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
 
-#Preview {
-    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+struct HomeView: View {
+    var body: some View {
+        VStack(alignment: .center) {
+            Text("Welcome to Worship Helper")
+                .customFont(.headline, size: 24) // 使用自定義字型
+                .foregroundColor(.black) // 設定文字顏色
+        }
+        .ignoresSafeArea()
+        .background(Color.white) // 設定背景顏色
+    }
+}
+
+extension Text {
+    enum CustomFont: String {
+        case headline = "HelveticaNeue-Bold"
+        // 定義其他自定義字型
+    }
+    
+    func customFont(_ font: CustomFont, size: CGFloat) -> Text {
+        self.font(.custom(font.rawValue, size: size))
+    }
+    
+    func customFont(_ font: CustomFont) -> Text {
+        customFont(font, size: 16)
+    }
 }

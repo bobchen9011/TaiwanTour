@@ -8,13 +8,12 @@
 import SwiftUI
 
 @main
-struct TaiwanTourApp: App {
-    let persistenceController = PersistenceController.shared
+struct WorshipHelperApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                ContentView()
+            }
         }
     }
-}
+
