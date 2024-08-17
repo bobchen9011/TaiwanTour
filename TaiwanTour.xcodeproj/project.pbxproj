@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		997F593C2C7052C800BE491E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997F593B2C7052C800BE491E /* Assets.xcassets */; };
+		997F593E2C70561700BE491E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F593D2C70561700BE491E /* MapView.swift */; };
+		997F59402C70582C00BE491E /* RealMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F593F2C70582C00BE491E /* RealMapView.swift */; };
+		997F59422C70753B00BE491E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F59412C70753B00BE491E /* LocationManager.swift */; };
 		99CBCFE62C6F96D200FA192B /* TaiwanTourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBCFE52C6F96D200FA192B /* TaiwanTourApp.swift */; };
 		99CBCFE82C6F96D200FA192B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBCFE72C6F96D200FA192B /* ContentView.swift */; };
-		99CBCFEA2C6F96D300FA192B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99CBCFE92C6F96D300FA192B /* Assets.xcassets */; };
 		99CBCFED2C6F96D300FA192B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99CBCFEC2C6F96D300FA192B /* Preview Assets.xcassets */; };
 		99CBCFEF2C6F96D300FA192B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBCFEE2C6F96D300FA192B /* Persistence.swift */; };
 		99CBCFF22C6F96D300FA192B /* TaiwanTour.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 99CBCFF02C6F96D300FA192B /* TaiwanTour.xcdatamodeld */; };
@@ -45,10 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		997F593B2C7052C800BE491E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		997F593D2C70561700BE491E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		997F593F2C70582C00BE491E /* RealMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealMapView.swift; sourceTree = "<group>"; };
+		997F59412C70753B00BE491E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		99CBCFE22C6F96D200FA192B /* TaiwanTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiwanTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99CBCFE52C6F96D200FA192B /* TaiwanTourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanTourApp.swift; sourceTree = "<group>"; };
 		99CBCFE72C6F96D200FA192B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		99CBCFE92C6F96D300FA192B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99CBCFEC2C6F96D300FA192B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		99CBCFEE2C6F96D300FA192B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		99CBCFF12C6F96D300FA192B /* TaiwanTour.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TaiwanTour.xcdatamodel; sourceTree = "<group>"; };
@@ -123,16 +129,19 @@
 		99CBCFE42C6F96D200FA192B /* TaiwanTour */ = {
 			isa = PBXGroup;
 			children = (
+				997F593B2C7052C800BE491E /* Assets.xcassets */,
 				99CBD0442C6F98E100FA192B /* Style */,
 				99CBD04C2C6F98E100FA192B /* RiveAssets */,
 				99CBD06C2C6FA1E300FA192B /* SideMenuView */,
 				99CBCFE52C6F96D200FA192B /* TaiwanTourApp.swift */,
 				99CBCFE72C6F96D200FA192B /* ContentView.swift */,
 				99CBD06A2C6F9E6100FA192B /* TabView.swift */,
-				99CBCFE92C6F96D300FA192B /* Assets.xcassets */,
 				99CBCFEE2C6F96D300FA192B /* Persistence.swift */,
 				99CBCFF02C6F96D300FA192B /* TaiwanTour.xcdatamodeld */,
 				99CBCFEB2C6F96D300FA192B /* Preview Content */,
+				997F593D2C70561700BE491E /* MapView.swift */,
+				997F593F2C70582C00BE491E /* RealMapView.swift */,
+				997F59412C70753B00BE491E /* LocationManager.swift */,
 			);
 			path = TaiwanTour;
 			sourceTree = "<group>";
@@ -307,8 +316,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				997F593C2C7052C800BE491E /* Assets.xcassets in Resources */,
 				99CBCFED2C6F96D300FA192B /* Preview Assets.xcassets in Resources */,
-				99CBCFEA2C6F96D300FA192B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,14 +344,17 @@
 			files = (
 				99CBD0542C6F98E100FA192B /* CustomTextField.swift in Sources */,
 				99CBD05A2C6F98E100FA192B /* CustomFont.swift in Sources */,
+				997F59422C70753B00BE491E /* LocationManager.swift in Sources */,
 				99CBCFEF2C6F96D300FA192B /* Persistence.swift in Sources */,
 				99CBD0702C6FA21C00FA192B /* SideMenuOptionView.swift in Sources */,
+				997F593E2C70561700BE491E /* MapView.swift in Sources */,
 				99CBD0742C6FA24A00FA192B /* SideMenuViewModel.swift in Sources */,
 				99CBD0722C6FA23200FA192B /* SideMenuView.swift in Sources */,
 				99CBCFF22C6F96D300FA192B /* TaiwanTour.xcdatamodeld in Sources */,
 				99CBCFE82C6F96D200FA192B /* ContentView.swift in Sources */,
 				99CBD0572C6F98E100FA192B /* Extensions.swift in Sources */,
 				99CBD06E2C6FA20100FA192B /* SideMenuHeaderView.swift in Sources */,
+				997F59402C70582C00BE491E /* RealMapView.swift in Sources */,
 				99CBD06B2C6F9E6100FA192B /* TabView.swift in Sources */,
 				99CBCFE62C6F96D200FA192B /* TaiwanTourApp.swift in Sources */,
 			);
@@ -511,6 +523,7 @@
 				DEVELOPMENT_TEAM = GLJ8Z56ANQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -540,6 +553,7 @@
 				DEVELOPMENT_TEAM = GLJ8Z56ANQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

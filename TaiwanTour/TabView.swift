@@ -5,10 +5,15 @@
 //  Created by BBOB on 2024/8/16.
 //
 
-import Foundation
 import SwiftUI
+import MapKit
 
 struct BottomTabView: View {
+    @State private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 25.0330, longitude: 121.5654),
+        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+    )
+    
     var body: some View {
         TabView {
             HomeView()
@@ -23,7 +28,7 @@ struct BottomTabView: View {
                     Text("住宿")
                 }
             
-            MapView()
+            RealMapView(region: $region)
                 .tabItem {
                     Image(systemName: "map.fill")
                     Text("地圖")
@@ -40,26 +45,20 @@ struct BottomTabView: View {
                     Image(systemName: "person.fill")
                     Text("我的")
                 }
-        }
-        
+        }.background(Color.black)
     }
 }
-
+    
 struct HomePageView: View {
     var body: some View {
         Text("這是首頁")
     }
+
 }
 
 struct AccommodationView: View {
     var body: some View {
         Text("這是住宿頁面")
-    }
-}
-
-struct MapView: View {
-    var body: some View {
-        Text("這是地圖頁面")
     }
 }
 
@@ -80,4 +79,3 @@ struct BottomTabView_Previews: PreviewProvider {
         BottomTabView()
     }
 }
-
