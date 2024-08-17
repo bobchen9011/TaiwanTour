@@ -12,50 +12,57 @@ import RiveRuntime
 struct ContentView: View {
     @StateObject private var locationManager = LocationManager() // 距離計算
     @State private var isShowing = false
+    @State private var isLoading = true // 用於控制是否顯示加載動畫
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
-        NavigationView {
-            ZStack {
-                VStack {
-                    VStack {
-                        LinearGradient(
-                            gradient: Gradient(colors: [Color(hex: "008080")]),
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                        .frame(height: 150)
-                        .ignoresSafeArea(edges: .top)
-                    }
-                    
-                    Spacer()
-                }
-                
-                if isShowing {
-                    sideMenuView(isShowing: $isShowing)
-                }
-                
-                BottomTabView()
-                    .cornerRadius(isShowing ? 20 : 10)
-                    .offset(x: isShowing ? 300 : 0, y: isShowing ? 44 : 0)
-                    .scaleEffect(isShowing ? 0.9 : 1)
-                    .navigationBarItems(
-                        leading: Button(action: {
-                            withAnimation(.spring()) {
-                                isShowing.toggle()
+        ZStack {
+            if isLoading {
+                LoadingView(isLoading: $isLoading)
+            } else {
+                NavigationView {
+                    ZStack {
+                        VStack {
+                            VStack {
+                                LinearGradient(
+                                    gradient: Gradient(colors: [Color(hex: "008080")]),
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                )
+                                .frame(height: 150)
+                                .ignoresSafeArea(edges: .top)
                             }
-                        }) {
-                            Image(systemName: "list.bullet")
-                                .foregroundColor(.black)
-                        },
-                        trailing: Button(action: {
-                            // 不再切換暗黑模式
-                        }) {
-                            // 這裡可以加入按鈕內容
+                            
+                            Spacer()
                         }
-                    )
-                    .navigationTitle("首頁")
-                    .navigationBarTitleDisplayMode(.inline)
+                        
+                        if isShowing {
+                            sideMenuView(isShowing: $isShowing)
+                        }
+                        
+                        BottomTabView()
+                            .cornerRadius(isShowing ? 20 : 10)
+                            .offset(x: isShowing ? 300 : 0, y: isShowing ? 44 : 0)
+                            .scaleEffect(isShowing ? 0.9 : 1)
+                            .navigationBarItems(
+                                leading: Button(action: {
+                                    withAnimation(.spring()) {
+                                        isShowing.toggle()
+                                    }
+                                }) {
+                                    Image(systemName: "list.bullet")
+                                        .foregroundColor(.black)
+                                },
+                                trailing: Button(action: {
+                                    // 不再切換暗黑模式
+                                }) {
+                                    // 這裡可以加入按鈕內容
+                                }
+                            )
+                            .navigationTitle("首頁")
+                            .navigationBarTitleDisplayMode(.inline)
+                    }
+                }
             }
         }
     }
@@ -66,6 +73,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
 
 // LocationManager 類別
 class LocationManager1: NSObject, ObservableObject, CLLocationManagerDelegate {
@@ -262,7 +270,10 @@ struct Destination: Identifiable {
 let recommendedDestinations = [
     Destination(name: "台北101", description: "城市地標的美景", imageName: "taipei101", latitude: 25.033964, longitude: 121.562321),
     Destination(name: "日月潭", description: "台灣最美的湖泊", imageName: "sunMoonLake", latitude: 25.033964, longitude: 121.562321),
-    Destination(name: "阿里山", description: "觀賞日出的最佳去處", imageName: "alishan", latitude: 25.033964, longitude: 121.562321)
+    Destination(name: "阿里山", description: "觀賞日出的最佳去處", imageName: "alishan", latitude: 25.033964, longitude: 121.562321),
+    Destination(name: "鹿港老街", description: "傳統文化老街", imageName: "lukang", latitude: 24.056951, longitude: 120.435459),
+    Destination(name: "九份老街", description: "懷舊與山城結合", imageName: "jiufen", latitude: 25.110392, longitude: 121.843136),
+    
 ]
 
 let nearbyDestinations = [
@@ -272,8 +283,20 @@ let nearbyDestinations = [
     Destination(name: "台中公園", description: "悠閒放鬆的綠意空間", imageName: "taichungPark", latitude: 24.141103, longitude: 120.684771),
     Destination(name: "逢甲夜市", description: "台中最熱鬧的夜市之一", imageName: "fengjiaNightMarket", latitude: 24.176664, longitude: 120.647957),
     Destination(name: "草悟道", description: "充滿藝術氛圍的步道", imageName: "calligraphyGreenway", latitude: 24.146457, longitude: 120.681352),
-    Destination(name: "彩虹眷村", description: "充滿色彩的藝術村", imageName: "rainbowVillage", latitude: 24.157541, longitude: 120.649679)
+    Destination(name: "彩虹眷村", description: "充滿色彩的藝術村", imageName: "rainbowVillage", latitude: 24.157541, longitude: 120.649679),
+    Destination(name: "台北101", description: "台北市的地標與觀景勝地", imageName: "taipei101", latitude: 25.033964, longitude: 121.564472),
+    Destination(name: "日月潭", description: "台灣最著名的湖泊景點", imageName: "sunMoonLake", latitude: 23.864405, longitude: 120.915004),
+    Destination(name: "阿里山國家風景區", description: "壯觀的山景與森林步道", imageName: "alishan", latitude: 23.508389, longitude: 120.805727),
+    Destination(name: "墾丁國家公園", description: "台灣最南端的自然景觀", imageName: "kenting", latitude: 21.949707, longitude: 120.779469),
+    Destination(name: "龍磐公園", description: "壯麗的海景與草原", imageName: "longpanPark", latitude: 21.957451, longitude: 120.841711),
+    Destination(name: "太魯閣國家公園", description: "台灣東部的峽谷與大理石山脈", imageName: "taroko", latitude: 24.154358, longitude: 121.620999),
+    Destination(name: "九份老街", description: "懷舊與山城景觀的結合", imageName: "jiufen", latitude: 25.110392, longitude: 121.843136),
+    Destination(name: "野柳地質公園", description: "獨特的岩石景觀與女王頭岩", imageName: "yehliu", latitude: 25.206436, longitude: 121.690947),
+    Destination(name: "鹿港老街", description: "古色古香的傳統文化街區", imageName: "lukang", latitude: 24.056951, longitude: 120.435459),
+    Destination(name: "金瓜石黃金博物館", description: "台灣礦業歷史與黃金文化的展覽", imageName: "goldMuseum", latitude: 25.109057, longitude: 121.846784),
+    Destination(name: "台南孔廟", description: "台灣歷史最悠久的孔子廟", imageName: "tainanConfuciusTemple", latitude: 22.993833, longitude: 120.204012)
 ]
+
 
 // 其他頁面的占位符
 struct SearchView: View {

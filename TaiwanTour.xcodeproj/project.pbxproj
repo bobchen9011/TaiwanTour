@@ -11,6 +11,10 @@
 		997F593E2C70561700BE491E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F593D2C70561700BE491E /* MapView.swift */; };
 		997F59402C70582C00BE491E /* RealMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F593F2C70582C00BE491E /* RealMapView.swift */; };
 		997F59422C70753B00BE491E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F59412C70753B00BE491E /* LocationManager.swift */; };
+		997F59442C710F9E00BE491E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F59432C710F9E00BE491E /* LoadingView.swift */; };
+		997F59462C710FD600BE491E /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F59452C710FD600BE491E /* GIFView.swift */; };
+		997F59482C71116C00BE491E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F59472C71116C00BE491E /* UIImage+Gif.swift */; };
+		997F594A2C71119A00BE491E /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 997F59492C71119A00BE491E /* loading.gif */; };
 		99CBCFE62C6F96D200FA192B /* TaiwanTourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBCFE52C6F96D200FA192B /* TaiwanTourApp.swift */; };
 		99CBCFE82C6F96D200FA192B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBCFE72C6F96D200FA192B /* ContentView.swift */; };
 		99CBCFED2C6F96D300FA192B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99CBCFEC2C6F96D300FA192B /* Preview Assets.xcassets */; };
@@ -52,6 +56,10 @@
 		997F593D2C70561700BE491E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		997F593F2C70582C00BE491E /* RealMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealMapView.swift; sourceTree = "<group>"; };
 		997F59412C70753B00BE491E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		997F59432C710F9E00BE491E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		997F59452C710FD600BE491E /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
+		997F59472C71116C00BE491E /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "../../../Downloads/UIImage+Gif.swift"; sourceTree = "<group>"; };
+		997F59492C71119A00BE491E /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		99CBCFE22C6F96D200FA192B /* TaiwanTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiwanTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99CBCFE52C6F96D200FA192B /* TaiwanTourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanTourApp.swift; sourceTree = "<group>"; };
 		99CBCFE72C6F96D200FA192B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +137,8 @@
 		99CBCFE42C6F96D200FA192B /* TaiwanTour */ = {
 			isa = PBXGroup;
 			children = (
+				997F59492C71119A00BE491E /* loading.gif */,
+				997F59472C71116C00BE491E /* UIImage+Gif.swift */,
 				997F593B2C7052C800BE491E /* Assets.xcassets */,
 				99CBD0442C6F98E100FA192B /* Style */,
 				99CBD04C2C6F98E100FA192B /* RiveAssets */,
@@ -142,6 +152,8 @@
 				997F593D2C70561700BE491E /* MapView.swift */,
 				997F593F2C70582C00BE491E /* RealMapView.swift */,
 				997F59412C70753B00BE491E /* LocationManager.swift */,
+				997F59432C710F9E00BE491E /* LoadingView.swift */,
+				997F59452C710FD600BE491E /* GIFView.swift */,
 			);
 			path = TaiwanTour;
 			sourceTree = "<group>";
@@ -318,6 +330,7 @@
 			files = (
 				997F593C2C7052C800BE491E /* Assets.xcassets in Resources */,
 				99CBCFED2C6F96D300FA192B /* Preview Assets.xcassets in Resources */,
+				997F594A2C71119A00BE491E /* loading.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,14 +357,17 @@
 			files = (
 				99CBD0542C6F98E100FA192B /* CustomTextField.swift in Sources */,
 				99CBD05A2C6F98E100FA192B /* CustomFont.swift in Sources */,
+				997F59462C710FD600BE491E /* GIFView.swift in Sources */,
 				997F59422C70753B00BE491E /* LocationManager.swift in Sources */,
 				99CBCFEF2C6F96D300FA192B /* Persistence.swift in Sources */,
 				99CBD0702C6FA21C00FA192B /* SideMenuOptionView.swift in Sources */,
+				997F59442C710F9E00BE491E /* LoadingView.swift in Sources */,
 				997F593E2C70561700BE491E /* MapView.swift in Sources */,
 				99CBD0742C6FA24A00FA192B /* SideMenuViewModel.swift in Sources */,
 				99CBD0722C6FA23200FA192B /* SideMenuView.swift in Sources */,
 				99CBCFF22C6F96D300FA192B /* TaiwanTour.xcdatamodeld in Sources */,
 				99CBCFE82C6F96D200FA192B /* ContentView.swift in Sources */,
+				997F59482C71116C00BE491E /* UIImage+Gif.swift in Sources */,
 				99CBD0572C6F98E100FA192B /* Extensions.swift in Sources */,
 				99CBD06E2C6FA20100FA192B /* SideMenuHeaderView.swift in Sources */,
 				997F59402C70582C00BE491E /* RealMapView.swift in Sources */,
