@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreLocation
 import RiveRuntime
+import FirebaseCore
 
 struct ContentView: View {
     @StateObject private var locationManager = LocationManager() // 距離計算
@@ -22,15 +23,17 @@ struct ContentView: View {
             } else {
                 NavigationView {
                     ZStack {
+                        Color(hex: "8e7cc3").ignoresSafeArea() // 設定背景顏色並擴展到全螢幕
                         VStack {
                             VStack {
                                 LinearGradient(
-                                    gradient: Gradient(colors: [Color(hex: "008080")]),
+                                    gradient: Gradient(colors: [Color(hex: "8e7cc3")]),
                                     startPoint: .top,
                                     endPoint: .bottom
                                 )
                                 .frame(height: 150)
                                 .ignoresSafeArea(edges: .top)
+                                
                             }
                             
                             Spacer()
@@ -41,6 +44,7 @@ struct ContentView: View {
                         }
                         
                         BottomTabView()
+                            .background(Color(hex: "8e7cc3")) // 設定顏色或透明
                             .cornerRadius(isShowing ? 20 : 10)
                             .offset(x: isShowing ? 300 : 0, y: isShowing ? 44 : 0)
                             .scaleEffect(isShowing ? 0.9 : 1)
@@ -61,7 +65,12 @@ struct ContentView: View {
                             )
                             .navigationTitle("首頁")
                             .navigationBarTitleDisplayMode(.inline)
+
                     }
+                    
+                }
+                .refreshable {
+                    
                 }
             }
         }

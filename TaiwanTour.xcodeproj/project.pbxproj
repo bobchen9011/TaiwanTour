@@ -15,6 +15,13 @@
 		997F59462C710FD600BE491E /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F59452C710FD600BE491E /* GIFView.swift */; };
 		997F59482C71116C00BE491E /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F59472C71116C00BE491E /* UIImage+Gif.swift */; };
 		997F594A2C71119A00BE491E /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 997F59492C71119A00BE491E /* loading.gif */; };
+		9982F5752C7C1E58005CE859 /* UserAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9982F5742C7C1E58005CE859 /* UserAccountView.swift */; };
+		9982F5782C7C4C73005CE859 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9982F5772C7C4C73005CE859 /* FirebaseAuth */; };
+		9982F57A2C7C4C73005CE859 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9982F5792C7C4C73005CE859 /* FirebaseAuthCombine-Community */; };
+		9982F57C2C7C4D21005CE859 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9982F57B2C7C4D21005CE859 /* GoogleService-Info.plist */; };
+		9982F57E2C7C4F17005CE859 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9982F57D2C7C4F17005CE859 /* AppDelegate.swift */; };
+		9982F5822C7C4FC8005CE859 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 9982F5812C7C4FC8005CE859 /* GoogleSignIn */; };
+		9982F5842C7C4FC8005CE859 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9982F5832C7C4FC8005CE859 /* GoogleSignInSwift */; };
 		99CBCFE62C6F96D200FA192B /* TaiwanTourApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBCFE52C6F96D200FA192B /* TaiwanTourApp.swift */; };
 		99CBCFE82C6F96D200FA192B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CBCFE72C6F96D200FA192B /* ContentView.swift */; };
 		99CBCFED2C6F96D300FA192B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99CBCFEC2C6F96D300FA192B /* Preview Assets.xcassets */; };
@@ -60,6 +67,9 @@
 		997F59452C710FD600BE491E /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
 		997F59472C71116C00BE491E /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Gif.swift"; path = "../../../Downloads/UIImage+Gif.swift"; sourceTree = "<group>"; };
 		997F59492C71119A00BE491E /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
+		9982F5742C7C1E58005CE859 /* UserAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountView.swift; sourceTree = "<group>"; };
+		9982F57B2C7C4D21005CE859 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9982F57D2C7C4F17005CE859 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99CBCFE22C6F96D200FA192B /* TaiwanTour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiwanTour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99CBCFE52C6F96D200FA192B /* TaiwanTourApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanTourApp.swift; sourceTree = "<group>"; };
 		99CBCFE72C6F96D200FA192B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,7 +103,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9982F5842C7C4FC8005CE859 /* GoogleSignInSwift in Frameworks */,
 				99CBD0372C6F981300FA192B /* RiveRuntime in Frameworks */,
+				9982F5822C7C4FC8005CE859 /* GoogleSignIn in Frameworks */,
+				9982F57A2C7C4C73005CE859 /* FirebaseAuthCombine-Community in Frameworks */,
+				9982F5782C7C4C73005CE859 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +128,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9982F57F2C7C4F73005CE859 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9982F58C2C7C61F6005CE859 /* RiveAssets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RiveAssets;
+			path = "../../../Downloads/0514-main/project0622/RiveAssets";
+			sourceTree = "<group>";
+		};
 		99CBCFD92C6F96D200FA192B = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +150,7 @@
 				99CBCFFA2C6F96D300FA192B /* TaiwanTourTests */,
 				99CBD0042C6F96D300FA192B /* TaiwanTourUITests */,
 				99CBCFE32C6F96D200FA192B /* Products */,
+				9982F57F2C7C4F73005CE859 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +167,8 @@
 		99CBCFE42C6F96D200FA192B /* TaiwanTour */ = {
 			isa = PBXGroup;
 			children = (
+				9982F58C2C7C61F6005CE859 /* RiveAssets */,
+				9982F57B2C7C4D21005CE859 /* GoogleService-Info.plist */,
 				997F59492C71119A00BE491E /* loading.gif */,
 				997F59472C71116C00BE491E /* UIImage+Gif.swift */,
 				997F593B2C7052C800BE491E /* Assets.xcassets */,
@@ -154,6 +186,8 @@
 				997F59412C70753B00BE491E /* LocationManager.swift */,
 				997F59432C710F9E00BE491E /* LoadingView.swift */,
 				997F59452C710FD600BE491E /* GIFView.swift */,
+				9982F5742C7C1E58005CE859 /* UserAccountView.swift */,
+				9982F57D2C7C4F17005CE859 /* AppDelegate.swift */,
 			);
 			path = TaiwanTour;
 			sourceTree = "<group>";
@@ -236,6 +270,10 @@
 			name = TaiwanTour;
 			packageProductDependencies = (
 				99CBD0362C6F981300FA192B /* RiveRuntime */,
+				9982F5772C7C4C73005CE859 /* FirebaseAuth */,
+				9982F5792C7C4C73005CE859 /* FirebaseAuthCombine-Community */,
+				9982F5812C7C4FC8005CE859 /* GoogleSignIn */,
+				9982F5832C7C4FC8005CE859 /* GoogleSignInSwift */,
 			);
 			productName = TaiwanTour;
 			productReference = 99CBCFE22C6F96D200FA192B /* TaiwanTour.app */;
@@ -311,6 +349,8 @@
 			mainGroup = 99CBCFD92C6F96D200FA192B;
 			packageReferences = (
 				99CBD0352C6F97F600FA192B /* XCRemoteSwiftPackageReference "rive-ios" */,
+				9982F5762C7C4C73005CE859 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9982F5802C7C4FC8005CE859 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 99CBCFE32C6F96D200FA192B /* Products */;
 			projectDirPath = "";
@@ -331,6 +371,7 @@
 				997F593C2C7052C800BE491E /* Assets.xcassets in Resources */,
 				99CBCFED2C6F96D300FA192B /* Preview Assets.xcassets in Resources */,
 				997F594A2C71119A00BE491E /* loading.gif in Resources */,
+				9982F57C2C7C4D21005CE859 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +401,10 @@
 				997F59462C710FD600BE491E /* GIFView.swift in Sources */,
 				997F59422C70753B00BE491E /* LocationManager.swift in Sources */,
 				99CBCFEF2C6F96D300FA192B /* Persistence.swift in Sources */,
+				9982F5752C7C1E58005CE859 /* UserAccountView.swift in Sources */,
 				99CBD0702C6FA21C00FA192B /* SideMenuOptionView.swift in Sources */,
 				997F59442C710F9E00BE491E /* LoadingView.swift in Sources */,
+				9982F57E2C7C4F17005CE859 /* AppDelegate.swift in Sources */,
 				997F593E2C70561700BE491E /* MapView.swift in Sources */,
 				99CBD0742C6FA24A00FA192B /* SideMenuViewModel.swift in Sources */,
 				99CBD0722C6FA23200FA192B /* SideMenuView.swift in Sources */,
@@ -706,6 +749,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9982F5762C7C4C73005CE859 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+		9982F5802C7C4FC8005CE859 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		99CBD0352C6F97F600FA192B /* XCRemoteSwiftPackageReference "rive-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rive-app/rive-ios";
@@ -717,6 +776,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9982F5772C7C4C73005CE859 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9982F5762C7C4C73005CE859 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9982F5792C7C4C73005CE859 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9982F5762C7C4C73005CE859 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		9982F5812C7C4FC8005CE859 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9982F5802C7C4FC8005CE859 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		9982F5832C7C4FC8005CE859 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9982F5802C7C4FC8005CE859 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
 		99CBD0362C6F981300FA192B /* RiveRuntime */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 99CBD0352C6F97F600FA192B /* XCRemoteSwiftPackageReference "rive-ios" */;

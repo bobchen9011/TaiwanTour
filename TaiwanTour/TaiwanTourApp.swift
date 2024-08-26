@@ -9,10 +9,10 @@ import SwiftUI
 
 @main
 struct WorshipHelperApp: App {
-
     var body: some Scene {
         WindowGroup {
                 ContentView()
+            
             }
         }
     }

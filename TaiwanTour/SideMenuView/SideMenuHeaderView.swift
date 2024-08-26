@@ -16,7 +16,7 @@ struct sideMenuHeaderView: View {
             // 背景顏色
             VStack {
                 LinearGradient(
-                                gradient: Gradient(colors: [ Color(hex: "008080"), ]),
+                                gradient: Gradient(colors: [ Color(hex: "8e7cc3"), ]),
                                 startPoint: .top,
                                 endPoint: .bottom
                             )

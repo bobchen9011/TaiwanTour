@@ -45,7 +45,11 @@ struct BottomTabView: View {
                     Image(systemName: "person.fill")
                     Text("我的")
                 }
-        }.background(Color.black)
+        }
+        .onAppear() {
+            UITabBar.appearance().backgroundColor = UIColor(Color(hex: "8e7cc3"))
+        }
+//        .tint(Color(hex: "674ea7"))
     }
 }
     
@@ -70,7 +74,7 @@ struct ItineraryView: View {
 
 struct MyPageView: View {
     var body: some View {
-        Text("這是我的頁面")
+        UserAccountView()
     }
 }
 

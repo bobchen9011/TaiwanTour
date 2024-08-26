@@ -19,12 +19,12 @@ struct LoadingView: View {
                 .ignoresSafeArea()
 
             // 加載動畫
-            GIFView() // 確保你的 GIFView 正確顯示 GIF
-                .frame(width: 100, height: 100) // 設置你的 GIF 顯示大小
+//            GIFView() // 確保你的 GIFView 正確顯示 GIF
+//                .frame(width: 100, height: 100) // 設置你的 GIF 顯示大小
         }
         .onAppear {
             // 模擬加載，3秒後進入主頁面
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
                 isLoading = false
             }
         }
